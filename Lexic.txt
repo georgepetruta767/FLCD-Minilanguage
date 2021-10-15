@@ -1,34 +1,40 @@
- a. special symbols, representing:
-	- operators + - * / := < <= = >=
+ Alphabet:
+    a. Upper (A-Z) and lower case letters (a-z)
+    b. Underline character '_'
+    c. Decimal digits (0-9)
+
+Lexic: 
+	a. special symbols, representing:
+	- operators + - * / := < <= = >=, div, mod, and, or
 	- separators [ ] { } : ; space
 	- reserved words:
- 		declare, char, input, output, auxiliary, verify, if, len, case, true, 
-		false, end, start, always, append, value, div, mod, and, or
+		declare, char, input, output, auxiliary, verify, if, length, case, true, 
+		false, end, start, always, append, value, delete
 
- b. identifiers
-	 -a sequence of letters and digits, such that the first character is a letter; the rule is:
- 	identifier = letter {letter | digit | special_char }
- 	letter = "a" | "b" | ... | "z" | "A" | "B" | ...| "Z"
- 	digit = "0" | "1" |...| "9"
-	special_char = "_" 
+	b. identifiers
+		-a sequence of letters and digits, such that the first character is a letter; the rule is:
+			identifier = letter {letter | digit | special_char }
+			letter = "a" | "b" | ... | "z" | "A" | "B" | ...| "Z"
+			digit = "0" | "1" |...| "9"
+			special_char = "_" 
 
- c. constants
+	c. constants
+		1. integer
+			integer = "+" no | "-" no | no
+			no = digit {no}
 
-	1. integer
-		integer = "+" no | "-" no | no
-		no = digit {no}
+		2. float 
+			float = integer ["," digit {digit}]
 
-	2. float 
-		float = integer ["," digit {digit}]
+		2. character
+			character = 'letter' | 'digit'
 
-	2. character
- 		character = 'letter' | 'digit'
+		3. string
+			char = letter | digit
+			string = char {string}
 
-	3. string
- 		constchar = "string"
- 		string = char {string}
- 		char = letter | digit
-	
-	4. boolean 
-		boolean = "true" | "false"
+		4. boolean 
+			boolean = "true" | "false"
+
+		5. number = digit {digit}
 		
