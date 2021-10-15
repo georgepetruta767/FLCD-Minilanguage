@@ -3,7 +3,7 @@
     b. Underline character '_'
     c. Decimal digits (0-9)
 
-Lexic: 
+Lexic:     
 	a. special symbols, representing:
 	- operators + - * / := < <= = >=, div, mod, and, or
 	- separators [ ] { } : ; space
