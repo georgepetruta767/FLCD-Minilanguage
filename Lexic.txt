@@ -1,0 +1,34 @@
+ a. special symbols, representing:
+	- operators + - * / := < <= = >=
+	- separators [ ] { } : ; space
+	- reserved words:
+ 		declare, char, input, output, auxiliary, verify, if, len, case, true, 
+		false, end, start, always, append, value, div, mod, and, or
+
+ b. identifiers
+	 -a sequence of letters and digits, such that the first character is a letter; the rule is:
+ 	identifier = letter {letter | digit | special_char }
+ 	letter = "a" | "b" | ... | "z" | "A" | "B" | ...| "Z"
+ 	digit = "0" | "1" |...| "9"
+	special_char = "_" 
+
+ c. constants
+
+	1. integer
+		integer = "+" no | "-" no | no
+		no = digit {no}
+
+	2. float 
+		float = integer ["," digit {digit}]
+
+	2. character
+ 		character = 'letter' | 'digit'
+
+	3. string
+ 		constchar = "string"
+ 		string = char {string}
+ 		char = letter | digit
+	
+	4. boolean 
+		boolean = "true" | "false"
+		
