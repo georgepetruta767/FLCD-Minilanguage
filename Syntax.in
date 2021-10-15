@@ -21,7 +21,7 @@ assignment_stmt = IDENTIFIER "*=" expression "."
 io_stmt = "read" | "write" IDENTIFIER "."
 
 expression = expression ("+" | "-") term | term
-term = term ("*" | "/" | "%") factor | factor
+term = term ("x" | "/" | "%") factor | factor
 factor = "(" expression ")" | const | IDENTIFIER
 
 struct_stmt = if_stmt | while_stmt | pass_stmt | array_stmt | for_stmt
