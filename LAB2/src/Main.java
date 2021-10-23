@@ -2,12 +2,23 @@
 
 public class Main {
     public static void main(String[] args){
-        SymbolTable symbolTable = new SymbolTable(10);
+        SymbolTable symbolTable = new SymbolTable(8);
 
-        String[] symbols = {"a1", "b2", "c3", "d4", "a1"};
+        String[] symbols = {"a1", "1a", "b2", "c3", "d4", "a1"};
 
-        for (String symbol : symbols) {
-            System.out.println(symbolTable.addSymbol(symbol));
+        System.out.println("Add --------------");
+        for (int i = 0; i < symbols.length; ++i) {
+            System.out.println(symbolTable.addSymbol(symbols[i]));
+        }
+
+        System.out.println("\nContains --------------");
+        for (int i = 0; i < symbols.length; ++i) {
+            System.out.println(symbolTable.containsSymbol(symbols[i]));
+        }
+
+        System.out.println("\nRemove --------------");
+        for (int i = 0; i < symbols.length; ++i) {
+            System.out.println(symbolTable.removeSymbol(symbols[i]));
         }
     }
 

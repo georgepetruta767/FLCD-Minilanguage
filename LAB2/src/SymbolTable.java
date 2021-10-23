@@ -33,4 +33,16 @@ public class SymbolTable {
 
         return new Pair(hashFunction(symbol), symbols.get(hashFunction(symbol)).indexOf(symbol));
     }
+
+    public boolean removeSymbol(String symbol) {
+        int hashValue = hashFunction(symbol);
+
+        if (!symbols.get(hashValue).contains(symbol)) {
+            return false;
+        }
+
+        symbols.get(hashValue).remove(symbol);
+        return true;
+    }
+
 }
