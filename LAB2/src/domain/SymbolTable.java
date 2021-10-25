@@ -1,3 +1,5 @@
+package domain;
+
 import adt.Pair;
 
 import java.util.ArrayList;
