@@ -47,4 +47,12 @@ public class SymbolTable {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "SymbolTable{" +
+                "items=" + symbols +
+                ", size=" + symbols.size() +
+                '}';
+    }
+
 }

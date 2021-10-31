@@ -1,15 +1,15 @@
-program = "*start" decl_list cmpd_stmt "*end"
+program = "start" decl_list cmpd_stmt "end"
 
 decl_list = declaration | declaration "." decl_list
 
 declaration = variable_dclr | array_dclr
 
-variable_dclr = "declare" IDENTIFIER "(" type1 ")" type2 ["*=" expression] "."
-array_decl = "declare" IDENTIFIER "(" type1 ")" "[" array_length_assignment "]" type2 "."
+variable_dclr = "declare" IDENTIFIER type1 type2 "*=" expression "."
+array_decl = "declare" IDENTIFIER type1 array_length_assignment type2 "."
 array_length_assignment = "max-length" "*=" expression
 
 type1 = "boolean" | "char" | "integer" | "double" | "float"
-type2 = "input" | "output" | "auxiliary" | "input_output"
+type2 = "input" | "output" | "auxiliary" | "input-output"
 
 cmpd_stmt = stmt | stmt cmpd_stmt
 
@@ -18,10 +18,10 @@ stmt = simple_stmt | struct_stmt
 simple_stmt = assignment_stmt | io_stmt
 
 assignment_stmt = IDENTIFIER "*=" expression "."
-io_stmt = "read" | "write" IDENTIFIER "."
+io_stmt = "read" | "show" IDENTIFIER "."
 
 expression = expression ("+" | "-") term | term
-term = term ("x" | "/" | "%") factor | factor
+term = term ("*" | "/" | "%") factor | factor
 factor = "(" expression ")" | const | IDENTIFIER
 
 struct_stmt = if_stmt | while_stmt | pass_stmt | array_stmt | for_stmt
@@ -31,12 +31,12 @@ while_stmt = "repeat if:" "(" condition "):" cmpd_stmt "always:" cmpd_stmt
 pass_stmt = "pass."
 
 array_stmt = append_stmt | delete_stmt | length_stmt | get_stmt
-length_stmt = IDENTIFIER ".length" 
+length_stmt = IDENTIFIER ".length"
 append_stmt = "append" IDENTIFIER "value" "(" IDENTIFIER ")" "."
 delete_stmt = "delete" IDENTIFIER "value" "(" IDENTIFIER ")" "."
-get_stmt = IDENTIFIER "[" integer "]" 
+get_stmt = IDENTIFIER "[" integer "]"
 
-for_stmt = "go from" IDENTIFIER "to" IDENTIFIER ", ("increase" | "decrease") by number ":" cmpd_stmt 
+for_stmt = "go from" IDENTIFIER "to" IDENTIFIER ", ("increase" | "decrease") by number ":" cmpd_stmt
 
 condition = expression RELATION expression
-RELATION = "<" | "<=" | "=" | "<>" | ">=" | ">" | "and" | "or" 
+RELATION = "<" | "<=" | "=" | "<>" | ">=" | ">" | "and" | "or"

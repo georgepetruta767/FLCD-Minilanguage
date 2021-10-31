@@ -1,29 +1,29 @@
- Alphabet:
+Alphabet:
     a. Upper (A-Z) and lower case letters (a-z)
     b. Underline character '_'
     c. Decimal digits (0-9)
 
-Lexic:     
+Lexic:
 	a. special symbols, representing:
-	- operators + - * / := < <= = >=, div, mod, and, or
+	- operators + - * < <= = >= div mod and or
 	- separators [ ] { } : ; space
 	- reserved words:
-		declare, char, input, output, auxiliary, verify, if, length, case, true, 
-		false, end, start, always, append, value, delete
+		declare, max-length, input-output, char, input, output, auxiliary, verify, if, length, case, true,
+		false, end, start, always, append, value, delete, read, show, repeat, integer, boolean, character
 
 	b. identifiers
 		-a sequence of letters and digits, such that the first character is a letter; the rule is:
 			identifier = letter {letter | digit | special_char }
 			letter = "a" | "b" | ... | "z" | "A" | "B" | ...| "Z"
 			digit = "0" | "1" |...| "9"
-			special_char = "_" 
+			special_char = "_"
 
 	c. constants
 		1. integer
 			integer = "+" no | "-" no | no
 			no = digit {no}
 
-		2. float 
+		2. float
 			float = integer ["," digit {digit}]
 
 		2. character
@@ -33,8 +33,7 @@ Lexic:
 			char = letter | digit
 			string = char {string}
 
-		4. boolean 
+		4. boolean
 			boolean = "true" | "false"
 
 		5. number = digit {digit}
-		

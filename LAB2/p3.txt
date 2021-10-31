@@ -1,0 +1,18 @@
+start
+declare n integer input.
+declare divisors integer max-length *= 256 auxiliary.
+declare i integer auxiliary *= 1.
+
+read n.
+
+repeat if (i <= n):
+  verify (n mod i = 0):
+    case true:
+	append divisors value (i).
+    case false:
+	pass.
+  always:
+   n *= n div 10.
+
+show divisors.
+end

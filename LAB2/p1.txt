@@ -1,0 +1,24 @@
+start
+declare number integer input.
+declare i integer auxiliary *= 2.
+declare result boolean output.
+read number.
+
+verify (number = 1):
+  case true:
+    result *= true.
+    show result.
+  case false:
+    repeat if (i~i <= number):
+      verify (i~i = number)
+	case true:
+          result *= true.
+          show result.
+        case false:
+          pass.
+     always:
+     i *= i + 1.
+
+result *= false.
+show result.
+end

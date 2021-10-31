@@ -1,25 +1,14 @@
+import domain.Scanner;
 import domain.SymbolTable;
 
+import java.io.IOException;
+
+
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         SymbolTable symbolTable = new SymbolTable(8);
+        Scanner scanner = new Scanner(symbolTable, "tokens.in");
 
-        String[] symbols = {"a1", "1a", "b2", "c3", "d4", "a1"};
-
-        System.out.println("Add --------------");
-        for (int i = 0; i < symbols.length; ++i) {
-            System.out.println(symbolTable.addSymbol(symbols[i]));
-        }
-
-        System.out.println("\nContains --------------");
-        for (int i = 0; i < symbols.length; ++i) {
-            System.out.println(symbolTable.containsSymbol(symbols[i]));
-        }
-
-        System.out.println("\nRemove --------------");
-        for (int i = 0; i < symbols.length; ++i) {
-            System.out.println(symbolTable.removeSymbol(symbols[i]));
-        }
+        scanner.scan("p2.txt");
     }
-
 }

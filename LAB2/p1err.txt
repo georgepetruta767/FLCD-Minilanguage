@@ -1,0 +1,16 @@
+*start
+declare word char max-length *= 256 input-output.
+declare 1character char input *= "d".
+declare i integer auxiliary *= 0.
+
+verify if ($i < len "word"):
+  verify (vowel word[i]):
+    case true:
+      word[i] *= character.
+    case false:
+	pass.
+  always:
+	i *= i + 1.
+
+show word. 
+*end

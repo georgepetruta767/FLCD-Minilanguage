@@ -1,0 +1,16 @@
+start
+declare n integer input.
+declare result integer output = 0.
+read n.
+
+repeat if (n > 0):
+  verify (n mod 10 mod 2 = 1):
+	case true:
+	  result *= result + 1.
+	case false:
+	  pass.
+   always:
+   n *= n div 10.
+
+show result.
+end
