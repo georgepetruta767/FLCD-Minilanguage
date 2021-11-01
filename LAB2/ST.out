@@ -1,1 +1,1 @@
-SymbolTable{items=[[0], [10, 1], [2], [], [], [], [n], [result]], size=8}
+SymbolTable{items=[[0], [i, 1, 10], [], [divisors], [], [256], [n], []], size=8}

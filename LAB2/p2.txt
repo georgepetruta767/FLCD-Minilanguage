@@ -1,6 +1,6 @@
 start
 declare n integer input.
-declare result integer output = 0.
+declare result integer output *= 0.
 read n.
 
 repeat if (n > 0):

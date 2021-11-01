@@ -9,6 +9,6 @@ public class Main {
         SymbolTable symbolTable = new SymbolTable(8);
         Scanner scanner = new Scanner(symbolTable, "tokens.in");
 
-        scanner.scan("p2.txt");
+        scanner.scan("p3.txt");
     }
 }
